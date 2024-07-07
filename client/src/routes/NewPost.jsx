@@ -16,7 +16,7 @@ function NewPost() {
           <input type='text' id='name' name='author' required /> 
         </p>
         <p className={classes.actions}>
-          <Link to=".." type="button">
+          <Link style={{color: '#23014a', marginRight: '1rem'}} to=".." type="button">
             Cancel
           </Link>
           <button>Submit</button>

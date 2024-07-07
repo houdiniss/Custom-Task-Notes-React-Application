@@ -14,7 +14,7 @@
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  color: #ece1fa;
+  color: white;
 }
 
 .button {
@@ -22,16 +22,16 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #a990fb;
-  color: #2a2630;
+  background-color: #ebe4ff;
+  color: black;
   border: none;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
 }
 
 .button:hover {
-  background-color: #8c6cf7;
+  background-color: #c4b2ff;
 }

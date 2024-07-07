@@ -5,28 +5,39 @@ import {
   RouterProvider 
 } from 'react-router-dom';
 
-import App from './App';
+import Root from './Root.jsx';
 import Posts from './routes/Posts.jsx';
 import NewPost , { action as NewPostAction } from './routes/NewPost.jsx';
 import ErrorPage from './components/Error.jsx';
+import EditPost , { action as EditPostAction } from './routes/EditPost.jsx';
+import DeletePost from './routes/DeletePost.jsx';
 import './index.css';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/',
+        path: '',
         element: <Posts />,
         children: [
           {
             path: 'create-post',
             element: <NewPost />,
             action: NewPostAction
-          }
+          },
+          {
+            path: ':postId/edit',
+            element: <EditPost />,
+            action: EditPostAction
+          },
+          {
+            path: ':postId/delete',
+            element: <DeletePost />,
+          },
         ]
       }
     ]

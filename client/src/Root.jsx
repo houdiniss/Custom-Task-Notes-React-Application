@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 
 
-function App() {
+function Root() {
   return (
     <>
       <MainHeader />
@@ -12,4 +12,4 @@ function App() {
   )
 }
 
-export default App;
+export default Root;

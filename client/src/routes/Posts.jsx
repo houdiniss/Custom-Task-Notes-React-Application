@@ -1,9 +1,11 @@
-import Post from "../components/Post.jsx";
+import Post from '../components/Post.jsx';
 import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import classes from '../components/Post.module.css';
 
 function Posts() {
   const [ posts , setPosts ] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
     async function fetchPosts() {
@@ -13,7 +15,7 @@ function Posts() {
     }
     
     fetchPosts();
-  }, [posts])
+  }, [location])
 
   return (
     <>
@@ -30,8 +32,10 @@ function Posts() {
             <p>Start adding some!</p>
           </div>
         )}
-        {posts.map(post => (
-          <Post key={post.body} author={post.author} body={post.body}/>
+        {posts.map((post) => (
+          <li className={classes.post} key={post.id}>
+            <Post author={post.author} body={post.body} id={post.id}/>
+          </li>
         ))}
       </ul>
 
