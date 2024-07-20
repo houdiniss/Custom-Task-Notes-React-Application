@@ -32,7 +32,7 @@ export async function action({ request }) {
     const formData = await request.formData();
     const data = Object.fromEntries(formData);
 
-    const response = await fetch('http://localhost:8080/posts', {
+    const response = await fetch('https://custom-task-notes-react-application.onrender.com/posts', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(data)

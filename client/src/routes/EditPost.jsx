@@ -18,7 +18,7 @@ function EditPost() {
 
   useEffect(() => {
     async function fetchPost() {
-      const response = await fetch('http://localhost:8080/posts/' + id);
+      const response = await fetch('https://custom-task-notes-react-application.onrender.com/posts/' + id);
       
       if(!response.ok) {
         throw json({ message: 'Could not fetch post.' })
@@ -88,7 +88,7 @@ export async function action({ request, params }) {
     const formData = await request.formData();
     const data = Object.fromEntries(formData);
 
-    const response = await fetch('http://localhost:8080/posts/' + id , {
+    const response = await fetch('https://custom-task-notes-react-application.onrender.com/posts/' + id , {
       method: 'PATCH',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(data)
