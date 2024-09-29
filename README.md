@@ -1,2 +1,4 @@
-# Custom-Task-Notes-React-Application
-React App for creating &amp; organizing your custom Tasks &amp; Notes.
+# Notes Application.
+### A Fullstack web app in which you can add your notes (description & text).
+  * FrontEnd : React & React Router <br>
+  * BackEnd: Node & Express
